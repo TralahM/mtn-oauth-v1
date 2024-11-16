@@ -886,8 +886,7 @@ class SyncAPIClient(BaseClient[httpx.Client, Stream[Any]]):
         ):  # pyright: ignore[reportUnnecessaryIsInstance]
             raise TypeError(
                 "Invalid `http_client` argument; Expected an instance of"
-                f" `httpx.Client` but got {
-                    type(http_client)}"
+                f" `httpx.Client` but got {type(http_client)}"
             )
 
         super().__init__(

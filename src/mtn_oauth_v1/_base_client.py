@@ -597,6 +597,7 @@ class BaseClient(Generic[_HttpxClientT, _DefaultStreamT]):
 
         return cast_to
 
+    # type: ignore[no-any-return]
     def _should_stream_response_body(self, request: httpx.Request) -> bool:
         # type: ignore[no-any-return]
         return request.headers.get(RAW_RESPONSE_HEADER) == "stream"

@@ -1493,8 +1493,7 @@ class AsyncAPIClient(BaseClient[httpx.AsyncClient, AsyncStream[Any]]):
         ):  # pyright: ignore[reportUnnecessaryIsInstance]
             raise TypeError(
                 f"Invalid `http_client` argument; Expected an instance of"
-                f" `httpx.AsyncClient` but got {
-                    type(http_client)}"
+                f" `httpx.AsyncClient` but got {type(http_client)}"
             )
 
         super().__init__(

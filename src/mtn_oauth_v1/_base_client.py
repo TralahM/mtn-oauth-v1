@@ -478,8 +478,8 @@ class BaseClient(Generic[_HttpxClientT, _DefaultStreamT]):
                 json_data = _merge_mappings(json_data, options.extra_json)
             else:
                 raise RuntimeError(
-                    f"Unexpected JSON data type, {
-                        type(json_data)}, cannot merge with `extra_body`"
+                    f"Unexpected JSON data type, {type(json_data)},"
+                    " cannot merge with `extra_body`"
                 )
 
         headers = self._build_headers(options, retries_taken=retries_taken)
@@ -503,8 +503,8 @@ class BaseClient(Generic[_HttpxClientT, _DefaultStreamT]):
             if json_data:
                 if not is_dict(json_data):
                     raise TypeError(
-                        f"Expected query input to be a dictionary for multipart requests but got {
-                            type(json_data)} instead."
+                        "Expected query input to be a dictionary for multipart"
+                        f" requests but got {type(json_data)} instead."
                     )
                 kwargs["data"] = self._serialize_multipartform(json_data)
 

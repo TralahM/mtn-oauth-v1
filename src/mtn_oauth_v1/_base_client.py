@@ -885,7 +885,8 @@ class SyncAPIClient(BaseClient[httpx.Client, Stream[Any]]):
             http_client, httpx.Client
         ):  # pyright: ignore[reportUnnecessaryIsInstance]
             raise TypeError(
-                f"Invalid `http_client` argument; Expected an instance of `httpx.Client` but got {
+                "Invalid `http_client` argument; Expected an instance of"
+                f" `httpx.Client` but got {
                     type(http_client)}"
             )
 
@@ -1167,8 +1168,8 @@ class SyncAPIClient(BaseClient[httpx.Client, Stream[Any]]):
         if inspect.isclass(origin) and issubclass(origin, BaseAPIResponse):
             if not issubclass(origin, APIResponse):
                 raise TypeError(
-                    f"API Response types must subclass {
-                        APIResponse}; Received {origin}"
+                    f"API Response types must subclass {APIResponse};"
+                    f" Received {origin}"
                 )
 
             response_cls = cast("type[BaseAPIResponse[Any]]", cast_to)
@@ -1492,7 +1493,8 @@ class AsyncAPIClient(BaseClient[httpx.AsyncClient, AsyncStream[Any]]):
             http_client, httpx.AsyncClient
         ):  # pyright: ignore[reportUnnecessaryIsInstance]
             raise TypeError(
-                f"Invalid `http_client` argument; Expected an instance of `httpx.AsyncClient` but got {
+                f"Invalid `http_client` argument; Expected an instance of"
+                f" `httpx.AsyncClient` but got {
                     type(http_client)}"
             )
 
@@ -1771,8 +1773,8 @@ class AsyncAPIClient(BaseClient[httpx.AsyncClient, AsyncStream[Any]]):
         if inspect.isclass(origin) and issubclass(origin, BaseAPIResponse):
             if not issubclass(origin, AsyncAPIResponse):
                 raise TypeError(
-                    f"API Response types must subclass {
-                        AsyncAPIResponse}; Received {origin}"
+                    f"API Response types must subclass {AsyncAPIResponse};"
+                    f" Received {origin}"
                 )
 
             response_cls = cast("type[BaseAPIResponse[Any]]", cast_to)

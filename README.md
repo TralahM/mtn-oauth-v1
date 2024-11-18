@@ -30,6 +30,8 @@ client = MtnOAuthV1()
 
 successtoken = client.access_tokens.create(
     grant_type="client_credentials",
+    client_id="your consumer id",
+    client_secret="your consumer secret",
 )
 print(successtoken.client_id)
 ```
@@ -48,6 +50,8 @@ client = AsyncMtnOAuthV1()
 async def main() -> None:
     successtoken = await client.access_tokens.create(
         grant_type="client_credentials",
+        client_id="your consumer id",
+        client_secret="your consumer secret",
     )
     print(successtoken.client_id)
 
@@ -84,6 +88,8 @@ client = MtnOAuthV1()
 try:
     client.access_tokens.create(
         grant_type="client_credentials",
+        client_id="your consumer id",
+        client_secret="your consumer secret",
     )
 except mtn_oauth_v1.APIConnectionError as e:
     print("The server could not be reached")
@@ -129,6 +135,8 @@ client = MtnOAuthV1(
 # Or, configure per-request:
 client.with_options(max_retries=5).access_tokens.create(
     grant_type="client_credentials",
+    client_id="your consumer id",
+    client_secret="your consumer secret",
 )
 ```
 
@@ -154,6 +162,8 @@ client = MtnOAuthV1(
 # Override per-request:
 client.with_options(timeout=5.0).access_tokens.create(
     grant_type="client_credentials",
+    client_id="your consumer id",
+    client_secret="your consumer secret",
 )
 ```
 
@@ -195,6 +205,8 @@ from mtn_oauth_v1 import MtnOAuthV1
 client = MtnOAuthV1()
 response = client.access_tokens.with_raw_response.create(
     grant_type="client_credentials",
+    client_id="your consumer id",
+    client_secret="your consumer secret",
 )
 print(response.headers.get('X-My-Header'))
 
@@ -215,6 +227,8 @@ To stream the response body, use `.with_streaming_response` instead, which requi
 ```python
 with client.access_tokens.with_streaming_response.create(
     grant_type="client_credentials",
+    client_id="your consumer id",
+    client_secret="your consumer secret",
 ) as response:
     print(response.headers.get("X-My-Header"))
 

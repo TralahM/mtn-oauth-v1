@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.1 (2024-11-18)
+
+Full Changelog: [v0.0.1-alpha.1...v0.1.0-alpha.1](https://github.com/TralahM/mtn-oauth-v1/compare/v0.0.1-alpha.1...v0.1.0-alpha.1)
+
+### Features
+
+* **api:** update via SDK Studio ([#4](https://github.com/TralahM/mtn-oauth-v1/issues/4)) ([8642166](https://github.com/TralahM/mtn-oauth-v1/commit/864216631ad9e9753566ce46f085f9e8a81189e2))
+
 ## 0.0.1-alpha.1 (2024-11-16)
 
 Full Changelog: [v0.0.1-alpha.0...v0.0.1-alpha.1](https://github.com/TralahM/mtn-oauth-v1/compare/v0.0.1-alpha.0...v0.0.1-alpha.1)

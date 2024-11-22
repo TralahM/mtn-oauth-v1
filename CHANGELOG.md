@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2024-11-22)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/TralahM/mtn-oauth-v1/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Chores
+
+* **internal:** fix compat model_dump method when warnings are passed ([#8](https://github.com/TralahM/mtn-oauth-v1/issues/8)) ([3edb08e](https://github.com/TralahM/mtn-oauth-v1/commit/3edb08ed2ebc0f0b274c8bfcb5975f5c09cb422c))
+* rebuild project due to codegen change ([#6](https://github.com/TralahM/mtn-oauth-v1/issues/6)) ([499fdeb](https://github.com/TralahM/mtn-oauth-v1/commit/499fdeb3f18c50d53847fd827bb2910694409cb5))
+
+
+### Documentation
+
+* add info log level to readme ([#9](https://github.com/TralahM/mtn-oauth-v1/issues/9)) ([1ab3281](https://github.com/TralahM/mtn-oauth-v1/commit/1ab32813fdfdae9ddfc20b15bb08fcf2a27ab2f1))
+
 ## 0.1.0-alpha.1 (2024-11-18)
 
 Full Changelog: [v0.0.1-alpha.1...v0.1.0-alpha.1](https://github.com/TralahM/mtn-oauth-v1/compare/v0.0.1-alpha.1...v0.1.0-alpha.1)

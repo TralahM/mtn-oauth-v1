@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2024-12-04)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/TralahM/mtn-oauth-v1/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Chores
+
+* **internal:** bump pyright ([#14](https://github.com/TralahM/mtn-oauth-v1/issues/14)) ([5cbc7a3](https://github.com/TralahM/mtn-oauth-v1/commit/5cbc7a3b6a4870fc9d5680807a2b8be1a545338c))
+* make the `Omit` type public ([#16](https://github.com/TralahM/mtn-oauth-v1/issues/16)) ([5dbff84](https://github.com/TralahM/mtn-oauth-v1/commit/5dbff8447a34617ca8c823405291221983cb172d))
+
 ## 0.1.0-alpha.2 (2024-11-28)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/TralahM/mtn-oauth-v1/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)

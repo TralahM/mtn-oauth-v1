@@ -8,7 +8,7 @@ from typing_extensions import Self, override
 
 import httpx
 
-from . import _exceptions
+from . import resources, _exceptions
 from ._qs import Querystring
 from ._types import (
     NOT_GIVEN,
@@ -24,7 +24,6 @@ from ._utils import (
     get_async_library,
 )
 from ._version import __version__
-from .resources import access_tokens
 from ._streaming import Stream as Stream, AsyncStream as AsyncStream
 from ._exceptions import APIStatusError
 from ._base_client import (
@@ -38,6 +37,7 @@ __all__ = [
     "Transport",
     "ProxiesTypes",
     "RequestOptions",
+    "resources",
     "MtnOAuthV1",
     "AsyncMtnOAuthV1",
     "Client",
@@ -46,7 +46,7 @@ __all__ = [
 
 
 class MtnOAuthV1(SyncAPIClient):
-    access_tokens: access_tokens.AccessTokensResource
+    access_tokens: resources.AccessTokensResource
     with_raw_response: MtnOAuthV1WithRawResponse
     with_streaming_response: MtnOAuthV1WithStreamedResponse
 
@@ -91,7 +91,7 @@ class MtnOAuthV1(SyncAPIClient):
             _strict_response_validation=_strict_response_validation,
         )
 
-        self.access_tokens = access_tokens.AccessTokensResource(self)
+        self.access_tokens = resources.AccessTokensResource(self)
         self.with_raw_response = MtnOAuthV1WithRawResponse(self)
         self.with_streaming_response = MtnOAuthV1WithStreamedResponse(self)
 
@@ -193,7 +193,7 @@ class MtnOAuthV1(SyncAPIClient):
 
 
 class AsyncMtnOAuthV1(AsyncAPIClient):
-    access_tokens: access_tokens.AsyncAccessTokensResource
+    access_tokens: resources.AsyncAccessTokensResource
     with_raw_response: AsyncMtnOAuthV1WithRawResponse
     with_streaming_response: AsyncMtnOAuthV1WithStreamedResponse
 
@@ -238,7 +238,7 @@ class AsyncMtnOAuthV1(AsyncAPIClient):
             _strict_response_validation=_strict_response_validation,
         )
 
-        self.access_tokens = access_tokens.AsyncAccessTokensResource(self)
+        self.access_tokens = resources.AsyncAccessTokensResource(self)
         self.with_raw_response = AsyncMtnOAuthV1WithRawResponse(self)
         self.with_streaming_response = AsyncMtnOAuthV1WithStreamedResponse(self)
 
@@ -341,22 +341,22 @@ class AsyncMtnOAuthV1(AsyncAPIClient):
 
 class MtnOAuthV1WithRawResponse:
     def __init__(self, client: MtnOAuthV1) -> None:
-        self.access_tokens = access_tokens.AccessTokensResourceWithRawResponse(client.access_tokens)
+        self.access_tokens = resources.AccessTokensResourceWithRawResponse(client.access_tokens)
 
 
 class AsyncMtnOAuthV1WithRawResponse:
     def __init__(self, client: AsyncMtnOAuthV1) -> None:
-        self.access_tokens = access_tokens.AsyncAccessTokensResourceWithRawResponse(client.access_tokens)
+        self.access_tokens = resources.AsyncAccessTokensResourceWithRawResponse(client.access_tokens)
 
 
 class MtnOAuthV1WithStreamedResponse:
     def __init__(self, client: MtnOAuthV1) -> None:
-        self.access_tokens = access_tokens.AccessTokensResourceWithStreamingResponse(client.access_tokens)
+        self.access_tokens = resources.AccessTokensResourceWithStreamingResponse(client.access_tokens)
 
 
 class AsyncMtnOAuthV1WithStreamedResponse:
     def __init__(self, client: AsyncMtnOAuthV1) -> None:
-        self.access_tokens = access_tokens.AsyncAccessTokensResourceWithStreamingResponse(client.access_tokens)
+        self.access_tokens = resources.AsyncAccessTokensResourceWithStreamingResponse(client.access_tokens)
 
 
 Client = MtnOAuthV1
